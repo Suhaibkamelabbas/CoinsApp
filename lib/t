@@ -1,0 +1,68 @@
+Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+      child: Container(
+        height: 200,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.grey[200],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const CircleAvatar(
+                    backgroundColor: Colors.black,
+                    radius: 52,
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj94DuBxfJAtOXx_QGtGHXTXWwQ_AQlxcRfHBd1g-9sw&s'),
+                      radius: 50,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'us dollar',
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey[300],
+                    ),
+                    child: Row(
+                      children: [
+                        CustomContainer(textPrice: '2400', text: 'Buy'),
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        CustomContainer(textPrice: '2500', text: 'Sell'),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text('1'),
+                ],
+              ),
+              const Spacer(),
+            ],
+          ),
+        ),
+      ),
+    )
